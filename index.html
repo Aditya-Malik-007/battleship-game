@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Battleship</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="home" class="screen">
+    <h1>BATTLESHIP</h1>
+    <p>2-Player Naval Combat</p>
+    <button onclick="startGame()">START GAME</button>
+  </div>
+  <div id="setup" class="screen off">
+    <h2 id="setupTitle"></h2>
+    <div id="dirBtns">
+      <button id="btnH" class="active" onclick="setDirection(true)">HORIZONTAL</button>
+      <button id="btnV" onclick="setDirection(false)">VERTICAL</button>
+    </div>
+    <div id="setupWrap"><div id="shipList"></div><canvas id="sCanvas"></canvas></div>
+    <p id="setupMsg"></p>
+  </div>
+  <div id="handoff" class="screen off">
+    <h2>Player 1 done</h2>
+    <p>Pass device to Player 2</p>
+    <button onclick="continueSetup()">CONTINUE</button>
+  </div>
+  <div id="battle" class="screen off">
+    <h2 id="battleTitle"></h2>
+    <p id="hitMsg"></p>
+    <div id="boards">
+      <div><p class="label">YOUR FLEET</p><canvas id="mCanvas"></canvas></div>
+      <div><p class="label">ENEMY</p><canvas id="eCanvas"></canvas></div>
+    </div>
+  </div>
+  <div id="win" class="screen off">
+    <h2 id="winTitle"></h2>
+    <p>All enemy ships sunk.</p>
+    <button onclick="goHome()">PLAY AGAIN</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+* { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+body { background: #0b0f1a; color: #c8d8f0; font-family: 'Courier New', monospace; }
+.screen { display: flex; flex-direction: column; align-items: center;
+          justify-content: center; min-height: 100vh; gap: 16px; }
+.off { display: none; }
+h1 { font-size: 56px; letter-spacing: 10px; color: #e0eeff; }
+h2 { font-size: 22px; letter-spacing: 4px; color: #90b8e0; }
+p  { font-size: 14px; color: #6080a0; letter-spacing: 1px; }
+button { padding: 10px 32px; background: none; border: 1px solid #3a5a80;
+         color: #90b8e0; font-family: inherit; font-size: 13px;
+         letter-spacing: 2px; cursor: pointer; transition: all .2s; }
+button:hover { background: #1a2a40; border-color: #6090c0; color: #c8e0ff; }
+button.active { background: #1a3050; border-color: #5090d0; color: #c8e8ff; }
+#dirBtns { display: flex; gap: 10px; }
+#setupWrap { display: flex; gap: 20px; align-items: flex-start; }
+#shipList { display: flex; flex-direction: column; gap: 6px;
+            min-width: 130px; padding-top: 6px; font-size: 12px; }
+.ship { padding: 6px 10px; border: 1px solid #1a2a40; color: #506080; }
+.ship.cur { border-color: #4080c0; color: #90c0f0; }
+.ship.done { text-decoration: line-through; opacity: .4; }
+#setupMsg { color: #c04040; font-size: 12px; min-height: 18px; }
+.label { font-size: 11px; letter-spacing: 3px; color: #405060;
+         text-align: center; margin-bottom: 6px; }
+#boards { display: flex; gap: 36px; }
+#hitMsg { font-size: 13px; letter-spacing: 2px; color: #d0a040; min-height: 20px; }
+canvas { display: block; cursor: crosshair; }
